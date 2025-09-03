@@ -53,7 +53,7 @@ function App() {
             className="flex items-center space-x-4"
             whileHover={{ scale: 1.05 }}
           >
-            <img src={companyLogo} alt="Horizon Logo" className="h-16 w-auto filter invert" />
+            <img src={companyLogo} alt="Horizon Logo" className="h-16 w-auto " />
           </motion.div>
           
           <nav className="hidden md:flex space-x-8">
