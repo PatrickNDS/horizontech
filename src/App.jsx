@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import './App.css'
 
 // Import do logo
-import companyLogo from './assets/Logo-horizon-Preto-V2.png'
+//import companyLogo from './assets/Logo-horizon-Preto-V2.png'
 
 function App() {
   // Variantes de animação para diferentes elementos
