@@ -199,20 +199,7 @@ function App() {
                 features: ["Atendimento Automatizado", "Integração Multi-plataforma", "Analytics Avançado"],
                 gradient: "from-green-500 to-emerald-500"
               },
-              {
-                icon: "AP",
-                title: "Automação de Processos",
-                description: "Implementação de RPA e workflows inteligentes que reduzem custos operacionais e aumentam a eficiência.",
-                features: ["RPA (Robotic Process Automation)", "Workflow Automation", "Integração de Sistemas"],
-                gradient: "from-orange-500 to-amber-500"
-              },
-              {
-                icon: "SP",
-                title: "SharePoint Solutions",
-                description: "Desenvolvimento e customização de intranets corporativas modernas e colaborativas no SharePoint.",
-                features: ["Intranet Corporativa", "Gestão Documental", "Colaboração em Equipe"],
-                gradient: "from-teal-500 to-cyan-500"
-              }
+              
             ].map((service, index) => (
               <motion.div 
                 key={index}
