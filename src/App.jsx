@@ -199,7 +199,14 @@ function App() {
                 features: ["Atendimento Automatizado", "Integração Multi-plataforma", "Analytics Avançado"],
                 gradient: "from-green-500 to-emerald-500"
               },
-              
+          
+              {
+                icon: "SP",
+                title: "Acessoria de TI",
+                description: "Desenvolvimento e customização de intranets corporativas modernas e colaborativas no SharePoint.",
+                features: ["Intranet Corporativa", "Gestão Documental", "Colaboração em Equipe"],
+                gradient: "from-teal-500 to-cyan-500"
+              }
             ].map((service, index) => (
               <motion.div 
                 key={index}
