@@ -112,7 +112,7 @@ function App() {
               className="text-xl text-gray-300 mb-8 leading-relaxed"
               variants={fadeInUp}
             >
-              Especialistas em IA, Chatbots, Automação de Processos e SharePoint para empresas que querem liderar o futuro
+              Identidade visual, vídeos criativos e automação no WhatsApp para empresas que querem marcar presença e crescer no digital
             </motion.p>
             
             <motion.div 
@@ -191,13 +191,7 @@ function App() {
             viewport={{ once: true }}
           >
             {[
-              {
-                icon: "AI",
-                title: "Inteligência Artificial",
-                description: "Desenvolvimento de soluções de IA personalizadas para otimizar processos e gerar insights valiosos para seu negócio.",
-                features: ["Machine Learning", "Análise Preditiva", "Processamento de Linguagem Natural"],
-                gradient: "from-blue-500 to-cyan-500"
-              },
+              
               {
                 icon: "CB",
                 title: "Chatbots Inteligentes",
