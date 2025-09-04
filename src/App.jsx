@@ -280,9 +280,9 @@ function App() {
             viewport={{ once: true }}
           >
             {[
-              { icon: "SEO", title: "SEO e Conteúdo", description: "Otimize seu site para motores de busca e crie conteúdo relevante que atraia seu público-alvo.", gradient: "from-purple-500 to-pink-500" },
-              { icon: "ADS", title: "Mídia Paga", description: "Campanhas de anúncios no Google Ads, Social Ads e outras plataformas para resultados rápidos.", gradient: "from-pink-500 to-red-500" },
-              { icon: "SM", title: "Social Media", description: "Gestão de redes sociais para construir sua marca, engajar seu público e gerar leads.", gradient: "from-blue-500 to-cyan-500" }
+              { icon: "SEO", title: "Criação de Artes e thumbnail", description: "Criação de thumbnail, carrosel e artes para post no instagram para atraia seu público-alvo.", gradient: "from-purple-500 to-pink-500" },
+              { icon: "VD", title: "Edição de Videos", description: "Edição de videos tanto para youtube,shorts,reels e tiktok que geram impacto.", gradient: "from-pink-500 to-red-500" },
+              { icon: "ID", title: "Desenvolvimento de identidade visual", description: "Criamos identidades visuais que fortalecem sua marca, transmitindo autenticidade e profissionalismo. Transformamos sua essência em uma presença marcante que gera reconhecimento e confiança.", gradient: "from-blue-500 to-cyan-500" }
             ].map((service, index) => (
               <motion.div 
                 key={index}
