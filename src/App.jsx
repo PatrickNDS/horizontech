@@ -280,7 +280,7 @@ function App() {
             viewport={{ once: true }}
           >
             {[
-              { icon: "SEO", title: "Criação de Artes e thumbnail", description: "Criação de thumbnail, carrosel e artes para post no instagram para atraia seu público-alvo.", gradient: "from-purple-500 to-pink-500" },
+              { icon: "CAT", title: "Criação de Artes e thumbnail", description: "Criação de thumbnail, carrosel e artes para post no instagram para atraia seu público-alvo.", gradient: "from-purple-500 to-pink-500" },
               { icon: "VD", title: "Edição de Videos", description: "Edição de videos tanto para youtube,shorts,reels e tiktok que geram impacto.", gradient: "from-pink-500 to-red-500" },
               { icon: "ID", title: "Desenvolvimento de identidade visual", description: "Criamos identidades visuais que fortalecem sua marca, transmitindo autenticidade e profissionalismo. Transformamos sua essência em uma presença marcante que gera reconhecimento e confiança.", gradient: "from-blue-500 to-cyan-500" }
             ].map((service, index) => (
@@ -357,103 +357,115 @@ function App() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form className="space-y-6">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={staggerContainer}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-              >
-                <motion.div variants={fadeInLeft}>
-                  <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Nome</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Seu nome" 
-                    className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
-                  />
-                </motion.div>
-                <motion.div variants={fadeInRight}>
-                  <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="seu@email.com" 
-                    className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
-                  />
-                </motion.div>
+                      <form 
+            name="contato" 
+            method="POST" 
+            data-netlify="true" 
+            className="space-y-6"
+          >
+            {/* Campo oculto obrigatório para o Netlify identificar o form */}
+            <input type="hidden" name="form-name" value="contato" />
+
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
+              <motion.div variants={fadeInLeft}>
+                <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Nome</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Seu nome" 
+                  required
+                  className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
+                />
               </motion.div>
-              
-              {[
-                { id: "company", label: "Empresa", placeholder: "Nome da sua empresa", type: "input" },
-                { id: "service", label: "Serviço de Interesse", type: "select" },
-                { id: "message", label: "Mensagem", placeholder: "Conte-nos sobre seu projeto...", type: "textarea" }
-              ].map((field, index) => (
-                <motion.div 
-                  key={field.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <label htmlFor={field.id} className="block text-gray-300 text-sm font-bold mb-2">{field.label}</label>
-                  {field.type === "input" && (
-                    <input 
-                      type="text" 
-                      id={field.id} 
-                      name={field.id} 
-                      placeholder={field.placeholder} 
-                      className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
-                    />
-                  )}
-                  {field.type === "select" && (
-                    <select 
-                      id={field.id} 
-                      name={field.id} 
-                      className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
-                    >
-                      <option>Selecione um serviço</option>
-                      <option>Inteligência Artificial</option>
-                      <option>Chatbots Inteligentes</option>
-                      <option>Automação de Processos</option>
-                      <option>SharePoint Solutions</option>
-                      <option>Marketing Digital</option>
-                      <option>Todos os Serviços</option>
-                    </select>
-                  )}
-                  {field.type === "textarea" && (
-                    <textarea 
-                      id={field.id} 
-                      name={field.id} 
-                      rows="5" 
-                      placeholder={field.placeholder} 
-                      className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
-                    ></textarea>
-                  )}
-                </motion.div>
-              ))}
-              
+              <motion.div variants={fadeInRight}>
+                <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="seu@email.com" 
+                  required
+                  className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
+                />
+              </motion.div>
+            </motion.div>
+            
+            {[ 
+              { id: "company", label: "Empresa", placeholder: "Nome da sua empresa", type: "input" },
+              { id: "service", label: "Serviço de Interesse", type: "select" },
+              { id: "message", label: "Mensagem", placeholder: "Conte-nos sobre seu projeto...", type: "textarea" }
+            ].map((field, index) => (
               <motion.div 
-                className="flex items-center justify-center"
+                key={field.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <motion.div {...scaleOnHover}>
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3 border-0"
+                <label htmlFor={field.id} className="block text-gray-300 text-sm font-bold mb-2">{field.label}</label>
+                {field.type === "input" && (
+                  <input 
+                    type="text" 
+                    id={field.id} 
+                    name={field.id} 
+                    placeholder={field.placeholder} 
+                    className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
+                  />
+                )}
+                {field.type === "select" && (
+                  <select 
+                    id={field.id} 
+                    name={field.id} 
+                    className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
                   >
-                    Solicitar Orçamento Gratuito
-                  </Button>
-                </motion.div>
+                    <option>Selecione um serviço</option>
+                    <option>Inteligência Artificial</option>
+                    <option>Chatbots Inteligentes</option>
+                    <option>Automação de Processos</option>
+                    <option>SharePoint Solutions</option>
+                    <option>Marketing Digital</option>
+                    <option>Todos os Serviços</option>
+                  </select>
+                )}
+                {field.type === "textarea" && (
+                  <textarea 
+                    id={field.id} 
+                    name={field.id} 
+                    rows="5" 
+                    placeholder={field.placeholder} 
+                    required
+                    className="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-700/50 transition-all duration-300 focus:border-blue-500"
+                  ></textarea>
+                )}
               </motion.div>
-            </form>
+            ))}
+            
+            <motion.div 
+              className="flex items-center justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <motion.div {...scaleOnHover}>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3 border-0"
+                >
+                  Solicitar Orçamento Gratuito
+                </Button>
+              </motion.div>
+            </motion.div>
+          </form>
+
           </motion.div>
         </div>
       </section>
